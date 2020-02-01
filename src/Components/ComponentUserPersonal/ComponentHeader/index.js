@@ -1,26 +1,17 @@
-import React, { useState } from "react";
-import {
-  Grid,
-  Avatar,
-  Typography,
-  Modal,
-  Backdrop,
-  Fade
-} from "@material-ui/core";
+import React from "react";
+import { Grid, Avatar, Typography } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
 import { Link } from "react-router-dom";
 import styles from "./styles";
 import ModalComponent from "../../ModalComponent";
+import FollowersComponent from "../../FollowersComponent";
+
 function ComponentHeader(props) {
-  const { classes } = props;
+  const { classes, children } = props;
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => {
     setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
   };
   return (
     <Grid container className={classes.containerHeader}>
@@ -67,10 +58,20 @@ function ComponentHeader(props) {
             11 Bai Viet
           </Grid>
           <Grid item className={classes.postFollowContent}>
-            75 người theo dõi
+            <FollowersComponent
+              title="75 người theo dõi"
+              contentTitle="Người theo dõi"
+              setHastag={false}
+              children={children}
+            />
           </Grid>
           <Grid item className={classes.postFollowContent}>
-            Đang theo dõi 13 người
+            <FollowersComponent
+              title="Đang theo dõi 13 người"
+              contentTitle="Đang theo dõi"
+              setHastag={true}
+              children={children}
+            />
           </Grid>
         </Grid>
 
@@ -88,14 +89,16 @@ function ComponentHeader(props) {
 
         <Grid container className={classes.chinhsuatrangcanhan1}>
           <Grid item className={classes.chinhsuatrangcanhan}>
-            <Typography
-              variant="button"
-              display="block"
-              className={classes.typography}
-              gutterBottom
-            >
-              Chỉnh sửa trang cá nhân
-            </Typography>
+            <Link to="/account/edit" style={{ textDecoration: "none" }}>
+              <Typography
+                variant="button"
+                display="block"
+                className={classes.typography}
+                gutterBottom
+              >
+                Chỉnh sửa trang cá nhân
+              </Typography>
+            </Link>
           </Grid>
         </Grid>
       </Grid>

@@ -1,14 +1,6 @@
-import React, { useState } from "react";
-import {
-  Grid,
-  Avatar,
-  Typography,
-  Modal,
-  Backdrop,
-  Fade
-} from "@material-ui/core";
+import React from "react";
+import { Grid, Modal, Backdrop, Fade } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
-import { Link } from "react-router-dom";
 import SettingsIcon from "@material-ui/icons/Settings";
 import styles from "./styles";
 import InputModalComponent from "../InputModalComponent";
@@ -39,7 +31,7 @@ function ComponentHeader(props) {
           timeout: 500
         }}
       >
-        <Fade in={open} style={{outline: "none"}}>
+        <Fade in={open} style={{ outline: "none" }}>
           <Grid container className={classes.paper}>
             <InputModalComponent
               content="Đổi mật khẩu"

@@ -2,6 +2,7 @@ import React from "react";
 import { withStyles, Grid } from "@material-ui/core";
 
 import styles from "./styles";
+import FollowersComponent from "../../FollowersComponent";
 
 function ComponentPostFollow(props) {
   const { classes } = props;
@@ -16,7 +17,7 @@ function ComponentPostFollow(props) {
       <Grid item xs={4}>
         <Grid item>75</Grid>
         <Grid item className={classes.typogra}>
-          người theo dõi
+          <FollowersComponent title="người theo dõi" />
         </Grid>
       </Grid>
       <Grid item xs={4}>

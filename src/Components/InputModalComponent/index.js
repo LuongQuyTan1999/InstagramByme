@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { Grid, Typography } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
 import { Link } from "react-router-dom";
 
 import styles from "./styles";
 
-function ComponentHeader(props) {
+function InputModalComponent(props) {
   const { classes, content, locationBottom, to } = props;
 
   return (
@@ -28,4 +28,4 @@ function ComponentHeader(props) {
   );
 }
 
-export default withStyles(styles)(ComponentHeader);
+export default withStyles(styles)(InputModalComponent);

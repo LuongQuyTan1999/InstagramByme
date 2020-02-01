@@ -31,14 +31,17 @@ function Header(props) {
           </div>
 
           <div>
-            <IconButton
-              edge="start"
-              className={classes.menuButton}
-              color="inherit"
-              aria-label="menu"
-            >
-              <ExploreOutlinedIcon />
-            </IconButton>
+            <Link to="/explore">
+              <IconButton
+                edge="start"
+                className={classes.menuButton}
+                color="inherit"
+                aria-label="menu"
+              >
+                <ExploreOutlinedIcon />
+              </IconButton>
+            </Link>
+
             <IconButton
               edge="start"
               className={classes.menuButton}

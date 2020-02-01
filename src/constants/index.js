@@ -12,7 +12,7 @@ import ComponentAccountEmail from "../Components/ComponentAccount/ComponentAccou
 import ComponentAccountContactHistory from "../Components/ComponentAccount/ComponentAccountContact_History";
 import ComponentAccountPrivacySecurity from "../Components/ComponentAccount/ComponentAccountPrivacy_Security";
 import ComponentAccountLoginActivity from "../Components/ComponentAccount/ComponentAccountLogin_Activity";
-
+import PageExplore from "../page/PageExplore";
 export const API_ENDPOINT = "http://localhost:3000";
 
 export const HOME_ROUTES = [
@@ -39,11 +39,16 @@ export const HOME_ROUTES = [
     name: "account",
     exact: true,
     component: () => <PageAccount />
+  },
+  {
+    path: "/explore",
+    name: "Explore",
+    exact: true,
+    component: () => <PageExplore />
   }
 ];
 
 export const USER_PERSONAL_ROUTES = [
-
   {
     path: "/luongquytan/channel",
     name: "Channel",

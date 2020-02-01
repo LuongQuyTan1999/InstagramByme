@@ -22,7 +22,7 @@ function PersonalPage(props) {
   return (
     <div>
       <Box component="div" pt={15} className={classes.container}>
-        <ComponentHeader />
+        <ComponentHeader children={children} />
         <ComponentName />
         <ComponentPostFollow />
         <ComponentImageVideo />

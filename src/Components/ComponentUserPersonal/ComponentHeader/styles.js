@@ -66,7 +66,8 @@ const styles = theme => ({
     }
   },
   typography: {
-    marginBottom: "0"
+    marginBottom: "0",
+    color: "#262626"
   }
 });
 
