@@ -1,6 +1,6 @@
 import React from "react";
 import { withStyles, CardHeader, Avatar, IconButton } from "@material-ui/core";
-import MoreVertIcon from "@material-ui/icons/MoreVert";
+import ModalHomeComponent from "../../ModalHomeComponent";
 import styles from "./styles";
 
 function CardHeaderComponent(props) {
@@ -18,7 +18,7 @@ function CardHeaderComponent(props) {
       }
       action={
         <IconButton aria-label="settings">
-          <MoreVertIcon />
+          <ModalHomeComponent />
         </IconButton>
       }
       title={data.title}

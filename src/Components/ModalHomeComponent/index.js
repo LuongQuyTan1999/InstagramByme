@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, Modal, Backdrop, Fade } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
-import SettingsIcon from "@material-ui/icons/Settings";
+import MoreVertIcon from "@material-ui/icons/MoreVert";
 import styles from "./styles";
 import InputModalComponent from "../InputModalComponent";
 
@@ -18,7 +18,7 @@ function ModalComponent(props) {
   };
   return (
     <div>
-      <SettingsIcon onClick={handleOpen} />
+      <MoreVertIcon onClick={handleOpen} />
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -34,29 +34,14 @@ function ModalComponent(props) {
         <Fade in={open} style={{ outline: "none" }}>
           <Grid container className={classes.paper}>
             <InputModalComponent
-              content="Đổi mật khẩu"
-              to="/account/password"
+              content="Báo cáo là không phù hợp"
+              styleColor={true}
             />
-            <InputModalComponent content="Thẻ tên" />
-            <InputModalComponent
-              content="Ứng dụng và trang web"
-              to="/account/password"
-            />
-            <InputModalComponent content="Thông báo" />
-            <InputModalComponent
-              content="Bảo mật và quyền riêng tư"
-              to="/account/privacy_and_security"
-            />
-            <InputModalComponent
-              content="Hoạt động đăng nhập"
-              to="/account/login_activity"
-            />
-            <InputModalComponent
-              content="Email từ Instagram"
-              to="/account/email"
-            />
-            <InputModalComponent content="Báo cáo sự cố" />
-            <InputModalComponent content="Đăng xuất" />
+            <InputModalComponent content="Bỏ theo dõi" styleColor={true} />
+            <InputModalComponent content="Đi tới bài viết" />
+            <InputModalComponent content="Chia sẻ" />
+            <InputModalComponent content="Sao chép liên kết" />
+            <InputModalComponent content="Nhúng" />
             <InputModalComponent content="Hủy" locationBottom={true} />
           </Grid>
         </Fade>

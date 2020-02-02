@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import styles from "./styles";
 
 function InputModalComponent(props) {
-  const { classes, content, locationBottom, to } = props;
+  const { classes, content, locationBottom, to, styleColor } = props;
 
   return (
     <Grid
@@ -20,7 +20,12 @@ function InputModalComponent(props) {
       }
     >
       <Link to={to} className={classes.link}>
-        <Typography variant="h4" gutterBottom className={classes.typoH4}>
+        <Typography
+          variant="h4"
+          gutterBottom
+          className={classes.typoH4}
+          style={styleColor ? { color: "red" } : { color: "#555555" }}
+        >
           {content}
         </Typography>
       </Link>
