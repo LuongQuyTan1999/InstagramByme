@@ -119,7 +119,7 @@ function FollowersComponent(props) {
                   />
                 </Tabs>
               </AppBar>
-              <TabPanel value={value} index={0}>
+              <TabPanel value={value} index={0} className={classes.containerPanel}>
                 <Grid container>
                   <ContentFollowersComponent
                     avatar="https://instagram.fdad1-1.fna.fbcdn.net/v/t51.2885-19/s150x150/66280602_1100237050176162_1591023226954186752_n.jpg?_nc_ht=instagram.fdad1-1.fna.fbcdn.net&_nc_ohc=ONBO_mIcW5oAX9f3ISK&oh=3b013e9452c83ee553becf0318e92fe0&oe=5EB91387"

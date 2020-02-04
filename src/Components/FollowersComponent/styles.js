@@ -30,7 +30,7 @@ const styles = theme => ({
     lineHeight: "55px"
   },
   icon: {
-    display: 'flex'
+    display: "flex"
   },
   typo5: {
     marginBottom: "0px",
@@ -47,6 +47,23 @@ const styles = theme => ({
     minWidth: "130px",
     [theme.breakpoints.up("sm")]: {
       minWidth: "200px"
+    }
+  },
+  containerPanel: {
+    maxHeight: "297px",
+    minHeight: "297px",
+    overflow: "auto"
+  },
+  "@global": {
+    "*::-webkit-scrollbar": {
+      width: "0.4em"
+    },
+    "*::-webkit-scrollbar-track": {
+      "-webkit-box-shadow": "inset 0 0 6px rgba(0,0,0,0.00)"
+    },
+    "*::-webkit-scrollbar-thumb": {
+      backgroundColor: "rgba(0,0,0,.1)",
+      outline: "1px solid slategrey"
     }
   }
 });
